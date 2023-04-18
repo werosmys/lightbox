@@ -1,0 +1,231 @@
+/* Mobile */
+
+.gallery {
+    display:flex;
+    flex-direction:column;
+  }
+
+.gallery img {
+    width: 100%;
+    display:block;
+}
+
+.item {
+    position:relative;
+    margin-top:10px;
+}
+
+.item1 {
+    position: relative;
+    margin-top:0;
+}
+
+.credit {
+    position: absolute;
+    font-size: 16px;
+    color:white;
+    bottom:0;
+    margin: 0 0 15px 20px;
+    font-family: 'Inconsolata', monospace;
+    text-shadow: 2px 2px 6px black;
+}
+
+.year {
+    position:absolute;
+    color:white;
+    text-shadow: 2px 2px 6px black;
+    right:0;
+    margin: 15px 20px 0 0;
+    font-size:32px;
+    font-family: 'Josefin Sans', sans-serif;
+    color:white;
+}
+
+.overlay figcaption {
+    position:absolute;
+    color:white;
+    text-shadow: 2px 2px 6px black;
+    right:0;
+    margin: 15px 20px 0 0;
+    font-size:32px;
+    font-family: 'Inconsolata', monospace;
+    color:white;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+
+@media (min-width: 576px) {
+    body {
+        margin: auto 15% 7.5% 15%;
+    }
+}
+
+@media (min-width: 768px) {
+    /* Gallery Styling */
+
+    body {
+        margin: auto 4% 2% 4%;
+    }
+
+    .gallery {
+        display:block;
+        column-count:3;
+        gap:20px;
+    }
+
+    .item {
+        position:relative;
+        margin-top: 20px;
+    }
+
+    /* Removes top margin on first photo */
+
+        .item1 {
+            position:relative;
+        }
+
+    img {
+        display: block;
+        width:100%;
+        cursor:pointer;
+    }
+
+    .credit {
+        font-size: 14px;
+        margin: 0 0 10px 15px;
+    }
+    
+    .year {
+        margin: 10px 15px 0 0;
+        font-size:24px;
+    }
+
+     /* Lightbox Styling */
+
+     #lightbox {
+        position: fixed;
+        top:0;
+        left:0;
+        width:100%;
+        height:100vh;
+        background-color: rgba(0,0,0,0.7);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #lightbox-caption {
+        font-size: 26px;
+        color:white;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        position:absolute;
+        z-index: 1;
+        background-color: rgba(0,0,0,0.5);
+        padding: 10px;
+    }
+
+    .short {
+        transform: scale(85%);
+    }
+
+    .short-caption {
+        bottom:22%;
+        left:9%;
+    }
+
+    .tall {
+        transform: scale(55%);
+    }
+
+    .tall-caption {
+        bottom:9%;
+        left:24%;
+    }
+
+}
+
+@media (min-width: 992px) {
+
+    /* Style for main body */
+    body {
+        margin: auto 10% 5% 10%;
+    }
+
+    /* Typographic Overlay */
+
+    .overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        color: white;
+        text-shadow: 2px 2px 6px black;
+    }
+
+    .year {
+        position:absolute;
+        right:0;
+        margin: 10px 15px 0 0;
+        font-size: 32px;
+        font-family: 'Josefin Sans', sans-serif;
+        color: white;
+        text-shadow: 2px 2px 6px black;
+    }
+    
+    .credit {
+        position:absolute;
+        bottom:0;
+        margin: 0 0 10px 15px;
+        font-size: 16px;
+        font-family: 'Inconsolata', monospace;
+    }
+
+    /* Lightbox Styling */
+
+    .short {
+        transform: scale(85%);
+    }
+
+    .short-caption {
+        bottom:14%;
+        left:9%;
+    }
+
+    .tall {
+        transform: scale(45%);
+    }
+
+    .tall-caption {
+        bottom:7%;
+        left:29%;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    #lightbox-caption {
+        font-size: 36px;
+        padding: 20px;
+    }
+    
+    .short {
+        transform: scale(65%);
+    }
+
+    .short-caption {
+        bottom:7%;
+        left:18%;
+    }
+
+    .tall {
+        transform: scale(31%);
+    }
+
+    .tall-caption {
+        bottom:3.7%;
+        left:35%;
+    }
+}
