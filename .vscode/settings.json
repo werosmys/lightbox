@@ -1,5 +1,6 @@
 {
     "emmet.extensionsPath": [
         "..vscode/snippets.json"
-    ]
+    ],
+    "liveServer.settings.port": 5501
 }
